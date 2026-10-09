@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import Animation from '@/components/Animation'
+import Animation from "@/components/Animation";
 
 export default function Page() {
   return (
@@ -8,5 +8,5 @@ export default function Page() {
       <h1 className="mb-6 text-center text-3xl font-bold">Animation</h1>
       <Animation />
     </div>
-  )
+  );
 }

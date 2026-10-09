@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
 const nativeSelectStyles = cva(
-  "bg-input-background peer w-full appearance-none rounded-lg border border-base-300 px-4 py-2.5 pr-11 text-title-50 outline-none focus:border-input-primary-focus-border focus:ring-4 focus:ring-input-primary-focus-border/20 disabled:border-base-100 disabled:text-input-disabled-text disabled:placeholder:text-input-disabled-text",
+  "bg-none bg-input-background peer w-full appearance-none rounded-lg border border-base-300 px-4 py-2.5 pr-11 text-title-50 outline-none focus:border-input-primary-focus-border focus:ring-4 focus:ring-input-primary-focus-border/20 disabled:border-base-100 disabled:text-input-disabled-text disabled:placeholder:text-input-disabled-text",
   {
     variants: {
       variant: {

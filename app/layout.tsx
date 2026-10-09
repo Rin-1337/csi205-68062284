@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Header from "@/components/Header";
 import "./globals.css";
 import Footer from "@/components/Footer";
@@ -13,28 +13,43 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
   return (
     <html>
-
       <body>
         <Header />
 
         <nav className="mt-4 flex justify-center gap-4">
           <Link href="/">
-            <Button variant="primary" size="sm" appearance={pathname === '/' ? 'fill' : 'outline'}>
+            <Button
+              variant="primary"
+              size="sm"
+              appearance={pathname === "/" ? "fill" : "outline"}
+            >
               Home
             </Button>
           </Link>
           <Link href="/animation">
-            <Button variant="primary" size="sm" appearance={pathname === '/animation' ? 'fill' : 'outline'}>
+            <Button
+              variant="primary"
+              size="sm"
+              appearance={pathname === "/animation" ? "fill" : "outline"}
+            >
               Animation
             </Button>
           </Link>
           <Link href="/calculator">
-            <Button variant="primary" size="sm" appearance={pathname === '/calculator' ? 'fill' : 'outline'}>
+            <Button
+              variant="primary"
+              size="sm"
+              appearance={pathname === "/calculator" ? "fill" : "outline"}
+            >
               Calculator
             </Button>
           </Link>
           <Link href="/todos">
-            <Button variant="primary" size="sm" appearance={pathname === '/todos' ? 'fill' : 'outline'}>
+            <Button
+              variant="primary"
+              size="sm"
+              appearance={pathname === "/todos" ? "fill" : "outline"}
+            >
               Todos
             </Button>
           </Link>
@@ -43,7 +58,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main>{children}</main>
         <Footer />
       </body>
-
     </html>
   );
 }
