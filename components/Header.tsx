@@ -1,7 +1,10 @@
 "use client";
 import { Badge } from "@/components/tailgrids/core/badge";
+import { useGlobalData } from "@/app/context/GlobalData";
 
 export default function Header() {
+  const { user } = useGlobalData();
+
   return (
     // header container
     <>
@@ -34,6 +37,24 @@ export default function Header() {
             FRONT END SOFTWARE DEVELOPMENT
           </Badge>
         </div>
+
+        {/* logged-in user */}
+        {user && (
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-lg">
+            <span className="font-bold">
+              ROLE:{" "}
+              <span className="rounded-md bg-red-50 px-2 text-red-700">{user.role}</span>
+            </span>
+            <span className="font-bold">
+              NAME:{" "}
+              <span className="rounded-md bg-green-50 px-2 text-green-700">{user.name}</span>
+            </span>
+            <span className="font-bold">
+              EMAIL:{" "}
+              <span className="rounded-md bg-gray-100 px-2 font-normal text-gray-800">{user.email}</span>
+            </span>
+          </div>
+        )}
       </div>
     </>
   );
